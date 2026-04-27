@@ -15,17 +15,19 @@
             Votre espace personnel pour gérer votre productivité
         </p>
 
+        @guest
         <div class="mt-6 flex justify-center gap-4">
             <a href="/register"
                class="px-5 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition">
                 S’inscrire
             </a>
-
+        
             <a href="/login"
                class="px-5 py-3 border border-gray-400 dark:border-gray-600 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition">
                 Se connecter
             </a>
         </div>
+        @endguest
     </div>
 
     <!-- Présentation -->
