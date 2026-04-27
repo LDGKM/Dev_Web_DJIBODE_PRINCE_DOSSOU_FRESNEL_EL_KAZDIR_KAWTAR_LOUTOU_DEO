@@ -48,13 +48,11 @@ Route::middleware('auth')->group(function () {
 
 });
 
-<<<<<<< HEAD
 /*Profile (Breeze)*/
-=======
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
->>>>>>> 958a356ba33085832c540238468e9d001291654a
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -62,9 +60,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-<<<<<<< HEAD
+
 /*Auth routes (login/register)*/
 
-=======
->>>>>>> 958a356ba33085832c540238468e9d001291654a
 require __DIR__.'/auth.php';
