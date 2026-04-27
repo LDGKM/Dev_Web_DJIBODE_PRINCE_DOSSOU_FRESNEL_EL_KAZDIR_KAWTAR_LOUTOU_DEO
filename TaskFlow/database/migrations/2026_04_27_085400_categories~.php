@@ -10,7 +10,7 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up(): void
-    {
+    {   Schema::disableForeignKeyConstraints();
         Schema::create('users', function (Blueprint $table) {
          $table->id();
          $table->foreignId('user_id')->constrained()->onUpdate('restrict');
@@ -18,8 +18,6 @@ return new class extends Migration
         $table->text('description');
          $table->timestamps();
  });
-        (id,
-user_id, name, description, timestamps
     }
 
     /**
